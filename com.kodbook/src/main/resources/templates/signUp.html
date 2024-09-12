@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KodBook</title>
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+	<h1>Welcome to KodBook !!</h1>
+	<h3>Create your KodBook account</h3>
+	<hr>
+	
+	<form action ="/signUp" method ="post">
+	
+		<strong><label>USERNAME: </label></strong>
+		<input type="text" name="username">
+		<br><br>
+		
+		<strong><label>EMAIL: </label></strong>
+		<input type="email" name="email">
+		<br><br>
+		
+		<strong><label>PASSWORD: </label></strong>
+		<input type="password" name="password">
+		<br><br>
+		
+		<strong><label>DOB: </label></strong>
+		<input type="date" name="dob">
+		<br><br>
+		
+		<strong><label>Gender: </label></strong>
+		<label>Male </label><input type="radio" name="gender" value ="M"> 
+		
+		<label>  Female </label><input type="radio" name="gender" value ="F">
+		<label>  Others </label><input type="radio" name="gender" value ="O">
+		<br><br>
+		
+		<input type ="submit" value="Sign Up">
+		<hr>
+		
+		<a href="/">Already have account? Login instead</a>
+	
+	</form>
+	
+
+</body>
+</html>

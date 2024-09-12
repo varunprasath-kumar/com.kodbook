@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Post</title>
+</head>
+<body>
+<h1>Create Your Post</h1>
+
+<form action="/createPost" method="post" enctype="multipart/form-data">
+
+	<label for ="photo">Upload Photo</label>
+	<input type="file" name="photo" accept="image/*" required>
+	<br><br>
+	
+	<label for ="caption">Enter Caption: </label>
+	<textarea rows="5" cols="25" name="caption" placeholder="Enter caption here..." required></textarea>
+	<br><br>
+	
+
+	<input type="submit" value="Upload Photo">
+
+</form>
+
+</body>
+</html>

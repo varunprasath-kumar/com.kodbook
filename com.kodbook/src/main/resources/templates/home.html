@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles.css">
+
+<title>HomePage</title>
+</head>
+<body>
+	<h1>Welcome to KodBook!!</h1>
+
+	<div>
+		<a href="/createNewPost"><button>Create New Post</button></a> <br>
+		<br>
+	</div>
+
+
+	<div class="profile-details">
+		<span th:each="post : ${allPosts}">
+			<p>
+				<strong>Photo:</strong>
+			</p> 
+			<img th:if="${post.photoBase64}"
+			th:src="'data:image/jpeg;base64,' + ${post.photoBase64}"
+			alt="Post Photo" />
+
+			<p>
+				<strong>Caption:</strong> <span th:text="${post.caption}"></span>
+			</p>
+
+			<p>
+				<strong>Likes:</strong> <span th:text="${post.likes}"></span>
+			</p>
+		</span>
+	</div>
+
+
+
+</body>
+</html>
