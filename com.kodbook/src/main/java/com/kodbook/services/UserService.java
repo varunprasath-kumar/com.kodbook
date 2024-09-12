@@ -11,6 +11,8 @@ public interface UserService {
 	boolean validateUser(String username, String password);
 
 	String updatePassword(String email, String newPassword, String confirmNewPassword,User user);
+	
+	
 
 }
  

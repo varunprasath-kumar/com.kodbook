@@ -9,5 +9,6 @@ public interface PostService {
 	void createPost(Post post);
 
 	List<Post> fetchAllPosts();
+	
 
 }

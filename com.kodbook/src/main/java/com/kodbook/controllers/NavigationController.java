@@ -30,5 +30,10 @@ public class NavigationController {
 		return "createPost";
 	}
 	
+	@GetMapping("/fetchAllPost")
+	public String fetchAllPost() {
+		return "fetchAllPosts";
+	}
+	
 	
 } 

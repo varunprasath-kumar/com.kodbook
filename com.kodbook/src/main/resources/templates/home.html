@@ -12,27 +12,12 @@
 	<div>
 		<a href="/createNewPost"><button>Create New Post</button></a> <br>
 		<br>
+		
+		<a href="/fetchAllPost"><button>Create New Post</button></a> <br>
+		<br>
 	</div>
 
 
-	<div class="profile-details">
-		<span th:each="post : ${allPosts}">
-			<p>
-				<strong>Photo:</strong>
-			</p> 
-			<img th:if="${post.photoBase64}"
-			th:src="'data:image/jpeg;base64,' + ${post.photoBase64}"
-			alt="Post Photo" />
-
-			<p>
-				<strong>Caption:</strong> <span th:text="${post.caption}"></span>
-			</p>
-
-			<p>
-				<strong>Likes:</strong> <span th:text="${post.likes}"></span>
-			</p>
-		</span>
-	</div>
 
 
 
