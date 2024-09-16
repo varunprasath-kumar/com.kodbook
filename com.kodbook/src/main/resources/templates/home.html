@@ -9,17 +9,55 @@
 <body>
 	<h1>Welcome to KodBook!!</h1>
 
-	<div>
+	<nav>
 		<a href="/createNewPost"><button>Create New Post</button></a> <br>
+		<br> <a href="/fetchAllPost"><button>News Feed</button></a> <br>
 		<br>
-		
-		<a href="/fetchAllPost"><button>Create New Post</button></a> <br>
-		<br>
+	</nav>
+
+	<h1>Welcome to HomePage !!</h1>
+
+
+	<div class="profile-details">
+		<span th:each="post : ${allPosts}">
+			<p>
+				<strong>Photo:</strong>
+			</p> <img th:if="${post.photoBase64}"
+			th:src="'data:image/jpeg;base64,' + ${post.photoBase64}"
+			alt="Post Photo" />
+<!-- displaying caption -->
+
+			<p>
+				<strong>Caption:</strong> <span th:text="${post.caption}"></span>
+			</p>
+<!-- displaying likes -->
+
+			<p>
+				<strong>Likes:</strong> <span th:text="${post.likes}"></span>
+			</p>
+ <!-- Displaying Comments -->
+                <div class="comments-section">
+                    <h4>Comments:</h4>
+                    <ol>
+                        <li th:each="comment : ${post.comments}">
+                            <span th:text="${comment}"></span>
+                        </li>
+                    </ol>
+                </div>
+			
+	<!-- like post form -->
+			<form action="/likePost" method="get">
+				<input type="hidden" name="id" th:value="${post.id}" /> <input type="submit" value="Like Post" />
+			</form>
+<!-- comment post form -->
+
+			<form action="/addComment" method="get">
+				<input type="hidden" name="id" th:value="${post.id}" />
+				<textarea name="comment" rows="2" cols="10" placeholder="Enter your comments..."></textarea>
+				<input type="submit" value="Add Comment">
+			</form>
+
+		</span>
 	</div>
-
-
-
-
-
 </body>
 </html>

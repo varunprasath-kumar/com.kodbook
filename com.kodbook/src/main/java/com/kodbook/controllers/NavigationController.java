@@ -3,6 +3,8 @@ package com.kodbook.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -30,10 +32,5 @@ public class NavigationController {
 		return "createPost";
 	}
 	
-	@GetMapping("/fetchAllPost")
-	public String fetchAllPost() {
-		return "fetchAllPosts";
-	}
-	
-	
+
 } 
