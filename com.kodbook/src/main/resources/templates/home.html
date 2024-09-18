@@ -7,15 +7,16 @@
 <title>HomePage</title>
 </head>
 <body>
-	<h1>Welcome to KodBook!!</h1>
-
+	
 	<nav>
-		<a href="/createNewPost"><button>Create New Post</button></a> <br>
-		<br> <a href="/fetchAllPost"><button>News Feed</button></a> <br>
-		<br>
+		<Strong><em><span th:text="${session.username}"></span></em></Strong>
+		<a href="/createNewPost"><button>Create New Post</button></a> 
+		<a href="/newsFeed"><button>News Feed</button></a>
+		<a href="/openMyProfile"><button>My Profile</button></a>
 	</nav>
 
 	<h1>Welcome to HomePage !!</h1>
+	
 
 
 	<div class="profile-details">
@@ -38,11 +39,11 @@
  <!-- Displaying Comments -->
                 <div class="comments-section">
                     <h4>Comments:</h4>
-                    <ol>
+                    <ul>
                         <li th:each="comment : ${post.comments}">
                             <span th:text="${comment}"></span>
                         </li>
-                    </ol>
+                    </ul>
                 </div>
 			
 	<!-- like post form -->
@@ -58,6 +59,8 @@
 			</form>
 
 		</span>
+			   
+		
 	</div>
 </body>
 </html>

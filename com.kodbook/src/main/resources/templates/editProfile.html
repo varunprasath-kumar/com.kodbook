@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>KodBook</title>
+<meta charset="UTF-8">
+<title>Edit Profile</title>
 <link rel="stylesheet" href="/styles.css">
 
 </head>
 <body>
-	<h1>Welcome to KodBook !!</h1>
-	<h3>Create your KodBook account</h3>
-	<hr>
-	
-	<form action ="/signUp" method ="post">
-	
-		<strong><label>USERNAME: </label></strong>
-		<input type="text" name="username">
-		<br><br>
-		
-		<strong><label>EMAIL: </label></strong>
-		<input type="email" name="email">
-		<br><br>
-		
-		<strong><label>PASSWORD: </label></strong>
-		<input type="password" name="password">
-		<br><br>
+	<h1>Edit Profile</h1>
+	<form action ="/updateProfile" method ="post" enctype="multipart/form-data">
 		
 		<strong><label>DOB: </label></strong>
 		<input type="date" name="dob">
@@ -54,16 +40,12 @@
 		<input type="text" name="gitHub">
 		<br><br>
 		
-		<input type="file" name="profilePic" accept="imae/*">
+		<input type="file" name="profilePic" accept="image/*">
 		<br><br>
 		
-		<input type ="submit" value="Sign Up">
+		<input type ="submit" value="Update Profile">
 		<hr>
 		
-		<a href="/">Already have account? Login instead</a>
-	
 	</form>
-	
-
 </body>
 </html>

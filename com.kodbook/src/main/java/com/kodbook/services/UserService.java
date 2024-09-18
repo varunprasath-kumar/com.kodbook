@@ -1,5 +1,6 @@
 package com.kodbook.services;
 
+
 import com.kodbook.entities.User;
 
 public interface UserService {
@@ -11,7 +12,13 @@ public interface UserService {
 	boolean validateUser(String username, String password);
 
 	String updatePassword(String email, String newPassword, String confirmNewPassword,User user);
+
+	User getUser(String username);
+
+	void updateUser(User user);
+
 	
+ 	
 	
 
 }

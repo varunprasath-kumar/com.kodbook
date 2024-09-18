@@ -2,7 +2,6 @@ package com.kodbook.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.kodbook.entities.User;
 import com.kodbook.repositories.UserRepository;
 
@@ -55,5 +54,21 @@ public class UserServiceImplementation implements UserService {
 		return "index";
 
 	}
+
+	@Override
+	public User getUser(String username) {
+		
+		return repo.findByUsername(username);
+	}
+
+	@Override
+	public void updateUser(User user) {
+		 repo.save(user);
+		
+	}
+	
+		
+		
+
 
 }
